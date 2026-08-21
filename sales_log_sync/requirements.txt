@@ -1,0 +1,4 @@
+playwright>=1.44
+google-api-python-client>=2.120
+google-auth>=2.29
+python-dotenv>=1.0

@@ -1,0 +1,6 @@
+sales_log_sync/.env
+sales_log_sync/service_account.json
+sales_log_sync/downloads/
+sales_log_sync/sync.log
+__pycache__/
+*.pyc
