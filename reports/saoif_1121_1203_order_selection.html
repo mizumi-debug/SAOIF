@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="SAOIF国内の11/21追加枠と12/3枠の新規以外オーダーは、11/21ブリリアント（初日30万〜36万・7日間80万〜105万AG）、12/3グランド（初日15万〜23万・7日間70万〜120万AG）が適切。9周年直前の課金控えを考慮。11/21追加の要否判断を求める。">
+<title>11月・12月 オーダー選定｜アソビモ株式会社</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --blue:#0073b7; --blue-d:#00428c; --blue-dd:#00234b; --blue-l:#e8f2fb;
+  --ink:#1a1a1c; --ink-2:#42484f; --ink-3:#6b7178;
+  --line:#d8dce0; --bg:#ffffff; --bg-2:#f2f4f7;
+  --red:#ce0000; --red-l:#ffebeb;
+  --green:#197a4b; --green-l:#e6f4ec;
+  --amber:#8c6200; --amber-l:#fff6e0;
+  --max:1080px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;background:var(--bg-2);color:var(--ink);
+  font-family:'Noto Sans JP','Hiragino Kaku Gothic ProN','Yu Gothic',sans-serif;
+  font-size:17px;line-height:1.85;letter-spacing:.01em;
+  -webkit-font-smoothing:antialiased;
+  counter-reset:sec;
+}
+
+/* ---------- 上部ナビ（目次） ---------- */
+nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.96);
+  border-bottom:1px solid var(--line);backdrop-filter:blur(6px)}
+nav .inner{max-width:var(--max);margin:0 auto;padding:10px 24px;
+  display:flex;flex-wrap:wrap;gap:6px 14px;align-items:center}
+nav b{font-size:14px;color:var(--blue);font-weight:700;margin-right:8px}
+nav a{font-size:13.5px;color:var(--ink-2);text-decoration:none;padding:3px 0;border-bottom:2px solid transparent}
+nav a:hover{color:var(--blue);border-bottom-color:var(--blue)}
+nav a:focus-visible{outline:3px solid #ffd43d;outline-offset:2px}
+
+/* ---------- セクション（カード） ---------- */
+.sec{
+  max-width:var(--max);margin:28px auto;background:var(--bg);
+  border-radius:14px;padding:56px 60px 60px;box-shadow:0 1px 3px rgba(0,0,0,.08);
+}
+.sec:not(.cover):not(.appendix){counter-increment:sec}
+.num{
+  display:inline-block;font-size:13px;font-weight:700;letter-spacing:.16em;
+  color:var(--blue-d);background:var(--blue-l);padding:5px 13px;border-radius:99px;margin-bottom:18px;
+}
+.num::before{content:counter(sec,decimal-leading-zero)}
+.num--text::before{content:none}
+
+/* ---------- 表紙 ---------- */
+.sec.cover{
+  background:linear-gradient(135deg,var(--blue-dd) 0%,var(--blue-d) 55%,var(--blue) 100%);
+  color:#fff;padding:80px 60px;margin-top:0;border-radius:0 0 14px 14px;
+}
+.cover-eyebrow{font-size:14px;font-weight:700;letter-spacing:.18em;opacity:.9;margin-bottom:16px}
+.cover .lead{color:rgba(255,255,255,.94);font-size:20px}
+.cover-meta{font-size:15px;line-height:1.9;color:rgba(255,255,255,.86);margin:28px 0 0}
+.cover-brand{font-size:14px;font-weight:700;letter-spacing:.2em;color:rgba(255,255,255,.8);margin-top:32px}
+.cover-brand img{height:24px;width:auto;display:block;filter:brightness(0) invert(1)}
+
+/* ---------- 見出し・本文 ---------- */
+h1{font-size:44px;line-height:1.3;font-weight:900;margin:0 0 20px;letter-spacing:-.01em}
+h2{font-size:33px;line-height:1.35;font-weight:900;margin:0 0 14px;letter-spacing:-.01em}
+h3{font-size:20px;font-weight:700;margin:34px 0 12px;padding-left:13px;
+  border-left:5px solid var(--blue);line-height:1.5}
+h4{font-size:17.5px;font-weight:700;line-height:1.5;margin:0 0 8px}
+.lead{font-size:19px;color:var(--ink-2);margin:0 0 30px;line-height:1.8}
+p{margin:0 0 16px}
+p:last-child{margin-bottom:0}
+strong{font-weight:700}
+.small{font-size:15px;color:var(--ink-3);line-height:1.8}
+a{color:var(--blue-d)}
+hr{border:none;border-top:1px solid var(--line);margin:34px 0}
+
+/* ---------- カードグリッド ---------- */
+.grid{display:grid;gap:16px;margin:22px 0}
+.g2{grid-template-columns:repeat(2,1fr)}
+.g3{grid-template-columns:repeat(3,1fr)}
+.card{background:var(--bg-2);border-radius:10px;padding:22px 24px}
+.card p{margin:0;font-size:15.5px;color:var(--ink-2);line-height:1.8}
+.tag{display:inline-block;font-size:12.5px;font-weight:700;padding:3px 10px;border-radius:5px;margin-bottom:10px;color:#fff}
+.t-blue{background:var(--blue)}
+.t-green{background:var(--green)}
+.t-red{background:var(--red)}
+.t-amber{background:var(--amber)}
+.t-gray{background:var(--ink-3)}
+
+/* ---------- 囲みボックス ---------- */
+.box{border-radius:10px;padding:20px 24px;margin:22px 0;border-left:6px solid}
+.box .h{font-weight:700;font-size:17px;margin:0 0 8px}
+.b-blue{background:var(--blue-l);border-color:var(--blue)}
+.b-blue .h{color:var(--blue-d)}
+.b-red{background:var(--red-l);border-color:var(--red)}
+.b-red .h{color:var(--red)}
+.b-green{background:var(--green-l);border-color:var(--green)}
+.b-green .h{color:var(--green)}
+.b-amber{background:var(--amber-l);border-color:var(--amber)}
+.b-amber .h{color:var(--amber)}
+
+/* ---------- 表 ---------- */
+.scroll{overflow-x:auto;margin:22px 0;-webkit-overflow-scrolling:touch}
+table{border-collapse:collapse;width:100%;font-size:15.5px;min-width:600px}
+th,td{border-bottom:1px solid var(--line);padding:11px 14px;text-align:left;vertical-align:top;line-height:1.7}
+th{background:var(--bg-2);font-weight:700;font-size:14.5px;white-space:nowrap}
+td.n,th.n{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}
+tr:last-child td{border-bottom:none}
+caption{caption-side:top;text-align:left;font-size:14.5px;color:var(--ink-3);padding-bottom:8px}
+.nodata{color:var(--ink-3)}
+.up{color:var(--green);font-weight:700}
+.down{color:var(--red);font-weight:700}
+
+/* ---------- リスト ---------- */
+ul,ol{margin:0 0 18px;padding-left:1.5em}
+li{margin-bottom:9px;line-height:1.85}
+p,li,td,.card p{overflow-wrap:anywhere;word-break:break-word;min-width:0}
+
+/* ---------- 手順（番号つき） ---------- */
+.flow{counter-reset:s;list-style:none;padding:0;margin:24px 0}
+.flow li{
+  counter-increment:s;position:relative;padding:16px 20px 16px 62px;
+  background:var(--bg-2);border-radius:10px;margin-bottom:12px;font-size:16px;
+}
+.flow li::before{
+  content:counter(s);position:absolute;left:18px;top:16px;
+  width:30px;height:30px;border-radius:50%;background:var(--blue);color:#fff;
+  font-weight:700;font-size:15px;display:flex;align-items:center;justify-content:center;
+}
+.flow li b{display:block;margin-bottom:3px;font-size:16.5px}
+.flow li span{font-size:15px;color:var(--ink-2)}
+
+/* ---------- 主要数値 ---------- */
+.kpi{display:flex;flex-wrap:wrap;gap:14px;margin:24px 0}
+.kpi div{flex:1 1 160px;background:var(--blue-l);border-radius:10px;padding:18px 20px}
+.kpi .v{font-size:31px;font-weight:900;color:var(--blue-d);line-height:1.2;font-variant-numeric:tabular-nums}
+.kpi .l{font-size:14px;color:var(--ink-2);margin-top:5px;line-height:1.6}
+
+/* ---------- チャート（renderCharts が SVG を生成する） ---------- */
+.chart{margin:24px 0}
+.ch-svg{width:100%;height:auto;display:block}
+.ch-legend{display:flex;gap:28px;margin-bottom:10px;flex-wrap:wrap}
+.ch-key{display:flex;align-items:center;gap:8px;font-size:15px;color:var(--ink-2)}
+.ch-key i{width:16px;height:16px;border-radius:4px;display:inline-block;flex-shrink:0}
+.ch-key b{margin-left:8px;font-weight:700;color:var(--ink);font-variant-numeric:tabular-nums}
+.ch-table{display:flex;gap:28px;flex-wrap:wrap;margin-top:14px}
+.ch-unit{font-size:14.5px;color:var(--ink-3);margin-top:8px}
+.ch-err{font-size:16px;color:var(--red);font-weight:700}
+.ch-ax{font-size:24px;fill:var(--ink-3)}
+.ch-lb{font-size:26px;fill:var(--ink-3);font-weight:500}
+.ch-lb2{font-size:28px;fill:var(--ink-2)}
+.ch-lb3{font-size:22px;fill:var(--ink-3)}
+.ch-vl{font-size:30px;font-weight:900;fill:var(--ink);font-variant-numeric:tabular-nums}
+.ch-vl2{font-size:30px;font-weight:900;fill:var(--ink);font-variant-numeric:tabular-nums}
+.ch-in{font-size:28px;font-weight:700;fill:#fff}
+.ch-center{font-size:56px;font-weight:900;fill:var(--ink)}
+
+/* ---------- 用語定義 ---------- */
+dl{margin:22px 0}
+dt{font-weight:700;font-size:17px;margin-top:18px;padding-left:12px;border-left:4px solid var(--blue-l)}
+dt:first-of-type{margin-top:0}
+dd{margin:4px 0 0 16px;font-size:16px;color:var(--ink-2);line-height:1.8}
+
+/* ---------- 引用・コード ---------- */
+blockquote{margin:22px 0;padding:16px 24px;background:var(--bg-2);border-left:5px solid var(--line);border-radius:0 10px 10px 0}
+blockquote cite{display:block;margin-top:8px;font-size:14.5px;font-style:normal;color:var(--ink-3)}
+code{background:var(--bg-2);padding:2px 7px;border-radius:4px;font-size:14.5px;
+  font-family:'SFMono-Regular',Consolas,'Courier New',monospace}
+pre{background:var(--bg-2);border-radius:10px;padding:20px 24px;overflow-x:auto;margin:22px 0;
+  font-family:'SFMono-Regular',Consolas,'Courier New',monospace;font-size:14px;line-height:1.9}
+pre code{background:none;padding:0;font-size:14px}
+sup a{text-decoration:none}
+
+/* ---------- フッタ ---------- */
+footer{max-width:var(--max);margin:0 auto;padding:34px 60px 60px;color:var(--ink-3);font-size:14.5px}
+footer .fn{margin:0 0 18px}
+footer .fn ol{padding-left:1.5em}
+footer .brand{font-weight:700;letter-spacing:.2em;color:var(--ink-2)}
+footer .brand img{height:20px;width:auto;display:block}
+
+/* ---------- 印刷 ---------- */
+@media print{
+  body{background:#fff;font-size:11pt;line-height:1.7}
+  nav{display:none}
+  .sec{max-width:none;margin:0;padding:24pt 0;border-radius:0;box-shadow:none;
+    break-inside:avoid;page-break-inside:avoid;border-bottom:1px solid var(--line)}
+  .sec.cover{-webkit-print-color-adjust:exact;print-color-adjust:exact;
+    padding:32pt 24pt;border-radius:0;break-after:page;page-break-after:always}
+  h1{font-size:24pt} h2{font-size:16pt} h3{font-size:13pt}
+  h2,h3{break-after:avoid;page-break-after:avoid}
+  .box,.card,.grid,table,.flow li,.kpi,blockquote,pre{break-inside:avoid;page-break-inside:avoid}
+  .box,.card,.kpi div,.tag,th{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  a{color:var(--ink)}
+  .sec a[href^="http"]::after{content:" (" attr(href) ")";font-size:9pt;color:var(--ink-3)}
+  table{min-width:0}
+  .scroll{overflow:visible}
+  @page{margin:16mm}
+}
+
+/* ---------- 狭い画面 ---------- */
+@media (max-width:820px){
+  body{font-size:16px}
+  .sec{padding:38px 24px 42px;margin:16px 12px;border-radius:10px}
+  .sec.cover{padding:52px 24px}
+  h1{font-size:31px} h2{font-size:25px} h3{font-size:19px}
+  .lead{font-size:17px}
+  .cover .lead{font-size:18px}
+  .g2,.g3{grid-template-columns:1fr}
+  nav .inner{padding:8px 16px}
+  footer{padding:28px 24px 48px}
+  pre{font-size:12.5px;padding:16px 18px}
+}
+</style>
+</head>
+<body>
+
+<!-- ========== 上部ナビ ========== -->
+<nav><div class="inner">
+  <b>目次</b>
+  <a href="#s1">結論</a>
+  <a href="#s2">売上予測</a>
+  <a href="#s3">日程の根拠</a>
+  <a href="#s4">判断が必要な論点</a>
+</div></nav>
+<section class="sec cover">
+  <p class="cover-eyebrow">SAOIF国内 ／ 2026年11月21日・12月3日の新規以外オーダー</p>
+  <h1>11/21はブリリアント、12/3はグランドを入れる。2本で7日間の有償AGは計150万〜225万を見込む</h1>
+  <p class="lead">11月の売上が不振な場合に11/21へ追加するオーダーと、12/3のオーダーの組み合わせを、2026年と前年の同じ日程の実績から決める。</p>
+  <p class="cover-meta">
+    対象読者：マーケティング本部、第二開発本部<br>
+    2026年10月27日／マーケティング本部
+  </p>
+  <p class="cover-brand">ASOBIMO</p>
+</section>
+<section class="sec" id="s1">
+  <div class="num"></div>
+  <h2>結論</h2>
+  <p class="lead">9周年の新スキルオーダー（11/30）の直前は課金が控えられるため、11/21には初日に売れるブリリアントを置き、期間全体で売れるグランドは12/3に回す。</p>
+  <div class="kpi">
+    <div><div class="v">30万〜36万</div><div class="l">11/21 ブリリアント 初日の有償AG</div></div>
+    <div><div class="v">80万〜105万</div><div class="l">11/21 ブリリアント 7日間の有償AG</div></div>
+    <div><div class="v">15万〜23万</div><div class="l">12/3 グランド 初日の有償AG</div></div>
+    <div><div class="v">70万〜120万</div><div class="l">12/3 グランド 7日間の有償AG</div></div>
+  </div>
+  <ul>
+    <li>ブリリアントは売上が初日に集まる（7日間÷初日で約3倍）。前年の同じ11/21の枠で、初日36万・7日間102万AGを売った。</li>
+    <li>グランドは売上が後半に伸びる（同じく4〜6倍）。11/21に置くと、伸びる時期がクラインBD（11/28）と9周年（11/30）に重なる。</li>
+    <li>11月が不振でなければ11/21の追加は不要で、12/3にグランドを1本入れる。</li>
+  </ul>
+  <div class="box b-red">
+    <p class="h">12/3は9周年の新スキルオーダーの3日後になる</p>
+    <p>2026年に、グランドをフルバーストステップアップの3日後に出した5/7は、7日間で44万AGにとどまった。12/3の予測の下限（70万AG）はこの影響を見込んだ値で、下回る可能性も残る。</p>
+  </div>
+</section>
+<section class="sec" id="s2">
+  <div class="num"></div>
+  <h2>予測は直近の同じオーダーの実績を基準にした。ブリリアントは初日が強く、グランドは7日間が大きい</h2>
+  <p class="lead">ブリリアントは初日35万AG前後で安定し、グランドは初日22万前後から7日間で96万〜138万AGまで伸びる。</p>
+  <div class="chart" data-type="bar"
+       data-labels="ブリリアント 25/11/21,ブリリアント 26/6/27,グランド 26/5/7,グランド 26/7/11,グランド 26/9/19"
+       data-series="初日=36,35,10,22,23|7日間=102,112,44,96,138"
+       data-unit="万AG（有償）"></div>
+  <p class="small">国内ガチャログ。初日は開幕（17:00）から当日24:00まで、7日間は開幕から168時間。グランド 26/5/7はフルバーストステップアップ（5/4）の3日後。</p>
+  <div class="scroll">
+    <table>
+      <caption>予測値と算定の根拠（有償AG、万）</caption>
+      <thead>
+        <tr><th>日程・オーダー</th><th class="n">初日</th><th class="n">7日間</th><th>根拠</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>11/21 ブリリアント</td><td class="n">30〜36</td><td class="n">80〜105</td><td>前年同枠 36／102、2026年6/27 35／112。前年比のユーザー減を下限に反映</td></tr>
+        <tr><td>12/3 グランド</td><td class="n">15〜23</td><td class="n">70〜120</td><td>2026年7/11 22／96、9/19 23／138。9周年の3日後の影響で割り引く</td></tr>
+        <tr><td>（参考）11/21 グランドにした場合</td><td class="n">20〜25</td><td class="n">70〜100</td><td>伸びる後半が11/28〜30に重なり、7日間の上振れが見込めない</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+<section class="sec" id="s3">
+  <div class="num"></div>
+  <h2>前年も同じ日程で、9周年の直前は課金が細り、直後の12/3は売れた</h2>
+  <p class="lead">2025年は11/21ブリリアント→11/28クラインBD・新スキル（リンク）→12/3カオスエボリューションの並びで、12/3のオーダーは7日間139万AGを売った。</p>
+  <div class="grid g2">
+    <div class="card">
+      <span class="tag t-blue">確定</span>
+      <h4>直前の週はガチャ全体が1日18万〜36万AG</h4>
+      <p>2025/11/22〜27は全オーダー合計でもこの水準だった。その中で11/21のブリリアントは11月末までに135万AGを売った。</p>
+    </div>
+    <div class="card">
+      <span class="tag t-blue">確定</span>
+      <h4>新スキルオーダーは7日間648万AG</h4>
+      <p>リンクオーダー（2025/11/28）は課金者763人・ARPPU 8,498。同じ日のクラインBDは7日間64万AGだった。</p>
+    </div>
+    <div class="card">
+      <span class="tag t-blue">確定</span>
+      <h4>直後の12/3も重課金者は回した</h4>
+      <p>12/3のカオスエボリューションの課金者350人のうち265人（76%）が、リンクオーダーでも課金していた。</p>
+    </div>
+    <div class="card">
+      <span class="tag t-red">注意</span>
+      <h4>前年12/3は新★4、今年は復刻</h4>
+      <p>前年の12/3は新★4のオーダーで、グランドとは中身が違う。139万AGをそのまま12/3グランドの見込みにはしていない。</p>
+    </div>
+  </div>
+</section>
+<section class="sec" id="s4">
+  <div class="num"></div>
+  <h2>判断が必要な論点</h2>
+  <p class="lead">11月の売上の見込みを見て、11/21にブリリアントを追加するかを決める。</p>
+  <div class="box b-blue">
+    <p class="h">11/21にブリリアントを追加するか</p>
+    <p>マーケティング本部と第二開発本部で、11月中旬の売上の着地見込みを見て判断する。追加しない場合は12/3にグランドを1本入れる。</p>
+  </div>
+  <div class="box b-blue">
+    <p class="h">フルバーストステップアップの日程</p>
+    <p>12/3グランドとの食い合いを避けるため、12/17前後（2週間空ける）に置けるかを第二開発本部で確認する。</p>
+  </div>
+</section>
+<section class="sec appendix">
+  <div class="num num--text">補足</div>
+  <h2>この資料の前提</h2>
+  <div class="grid g2">
+    <div class="card">
+      <span class="tag t-gray">推定した前提</span>
+      <p>国内ガチャログ（2025年2・3・5・7・8・9・11・12月、2026年3・5〜9月）を使用。オーダーの強さは2026年の実績を優先し、9周年前後の日程の影響は2026年に例がないため前年の同じ日程で見た。予測の幅は過去実績の範囲を基準にした判断で、統計モデルによるものではない。9周年の新スキルオーダーとクラインBDの規模は前年並みと仮定した。</p>
+    </div>
+    <div class="card">
+      <span class="tag t-gray">今回省いた情報</span>
+      <p>2024年の実績（初回のグランドで比較対象外）、海外の実績、スキル特化型ステップアップと女神オーダー（2026年の7日間は44万〜79万AG、または実績なしで候補から外した）、11月の売上の着地見込み。</p>
+    </div>
+  </div>
+  <h3>用語</h3>
+  <dl>
+    <dt>有償AG</dt>
+    <dd>課金で得たアルカナジェムのうち、そのオーダーで使われた量</dd>
+    <dt>初日／7日間</dt>
+    <dd>初日は開幕から当日24:00まで。7日間は開幕から168時間</dd>
+  </dl>
+</section>
+<footer>
+  <p class="brand">ASOBIMO</p>
+  <p>社外秘 / 無断転載禁止　アソビモ株式会社　2026年10月27日</p>
+</footer>
+
+
+<script>
+/* =========================================================================
+   チャート描画エンジン
+   HTMLに数値を書くだけでSVGを生成する。座標計算は一切不要。
+
+     <div class="chart" data-type="line"
+          data-labels="4月,5月,6月"
+          data-series="今月=120,160,200|前月=100,150,170"
+          data-unit="雫玉"></div>
+
+   data-type: line / bar / hbar / stack / donut / waterfall
+   data-highlight: 強調する位置（0起点、bar と hbar で有効）
+   data-center: donut の中央に出す文字
+   ========================================================================= */
+(function(){
+  var PALETTE = ['#2b7ce9','#0b4a9f','#87b5f0','#6b6b72','#c8c8cd'];
+  var POS = '#197a4b', NEG = '#b83a3a', AXIS = '#c8c8cd', TXT = '#44444a', SUB = '#6b6b72';
+  var W = 1760, H = 520;
+
+  function esc(s){ return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+  function fmt(n){ return Number(n).toLocaleString('ja-JP'); }
+
+  function parseSeries(raw){
+    if(!raw) return [];
+    return raw.split('|').map(function(part, i){
+      var m = part.split('=');
+      var name = m.length > 1 ? m[0].trim() : '';
+      var vals = (m.length > 1 ? m[1] : m[0]).split(',').map(function(v){ return parseFloat(v.trim()); });
+      return { name: name, values: vals, color: PALETTE[i % PALETTE.length] };
+    });
+  }
+  function parseItems(raw){
+    if(!raw) return [];
+    return raw.split('|').map(function(part, i){
+      var m = part.split('=');
+      return { name: m[0].trim(), value: parseFloat(m[1]), color: PALETTE[i % PALETTE.length] };
+    });
+  }
+  function niceMax(v){
+    if(v <= 0) return 1;
+    var e = Math.pow(10, Math.floor(Math.log(v)/Math.LN10));
+    var f = v/e;
+    var s = f <= 1 ? 1 : f <= 2 ? 2 : f <= 2.5 ? 2.5 : f <= 5 ? 5 : 10;
+    return s*e;
+  }
+  function legend(series){
+    if(series.length < 2 || !series[0].name) return '';
+    return '<div class="ch-legend">' + series.map(function(s){
+      return '<span class="ch-key"><i style="background:' + s.color + '"></i>' + esc(s.name) + '</span>';
+    }).join('') + '</div>';
+  }
+
+  /* ---------- 折れ線 ---------- */
+  function line(labels, series, unit){
+    var pad = {l:120, r:60, t:40, b:60};
+    var iw = W - pad.l - pad.r, ih = H - pad.t - pad.b;
+    var all = series.reduce(function(a,s){ return a.concat(s.values); }, []);
+    var max = niceMax(Math.max.apply(null, all));
+    var n = labels.length;
+    var x = function(i){ return pad.l + (n === 1 ? iw/2 : iw*i/(n-1)); };
+    var y = function(v){ return pad.t + ih - ih*v/max; };
+    var g = '';
+    for(var k=0;k<=4;k++){
+      var gy = pad.t + ih*k/4, gv = max*(4-k)/4;
+      g += '<line x1="'+pad.l+'" y1="'+gy+'" x2="'+(W-pad.r)+'" y2="'+gy+'" stroke="'+AXIS+'" stroke-width="1"/>'
+         + '<text x="'+(pad.l-16)+'" y="'+(gy+9)+'" text-anchor="end" class="ch-ax">'+fmt(Math.round(gv))+'</text>';
+    }
+    labels.forEach(function(l,i){
+      g += '<text x="'+x(i)+'" y="'+(pad.t+ih+42)+'" text-anchor="middle" class="ch-lb">'+esc(l)+'</text>';
+    });
+    series.forEach(function(s){
+      var pts = s.values.map(function(v,i){ return x(i)+','+y(v); }).join(' ');
+      g += '<polyline points="'+pts+'" fill="none" stroke="'+s.color+'" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/>';
+      s.values.forEach(function(v,i){
+        g += '<circle cx="'+x(i)+'" cy="'+y(v)+'" r="10" fill="#fff" stroke="'+s.color+'" stroke-width="6"/>';
+      });
+    });
+    var top = series[0];
+    top.values.forEach(function(v,i){
+      g += '<text x="'+x(i)+'" y="'+(y(v)-28)+'" text-anchor="middle" class="ch-vl">'+fmt(v)+'</text>';
+    });
+    return legend(series) + svg(g) + (unit ? unitNote(unit) : '');
+  }
+
+  /* ---------- 縦棒 ---------- */
+  function bar(labels, series, unit, hl){
+    var pad = {l:120, r:60, t:56, b:60};
+    var iw = W - pad.l - pad.r, ih = H - pad.t - pad.b;
+    var all = series.reduce(function(a,s){ return a.concat(s.values); }, []);
+    var max = niceMax(Math.max.apply(null, all));
+    var n = labels.length, m = series.length;
+    var slot = iw/n, bw = Math.min(slot*0.7/m, 120);
+    var g = '';
+    for(var k=0;k<=4;k++){
+      var gy = pad.t + ih*k/4;
+      g += '<line x1="'+pad.l+'" y1="'+gy+'" x2="'+(W-pad.r)+'" y2="'+gy+'" stroke="'+AXIS+'" stroke-width="1"/>'
+         + '<text x="'+(pad.l-16)+'" y="'+(gy+9)+'" text-anchor="end" class="ch-ax">'+fmt(Math.round(max*(4-k)/4))+'</text>';
+    }
+    labels.forEach(function(l,i){
+      var cx = pad.l + slot*i + slot/2;
+      g += '<text x="'+cx+'" y="'+(pad.t+ih+42)+'" text-anchor="middle" class="ch-lb">'+esc(l)+'</text>';
+      series.forEach(function(s,j){
+        var v = s.values[i], h = ih*v/max;
+        var bx = cx - (bw*m)/2 + bw*j;
+        var col = (hl !== null && i === hl && m === 1) ? '#0b4a9f' : s.color;
+        g += '<rect x="'+bx+'" y="'+(pad.t+ih-h)+'" width="'+(bw-8)+'" height="'+h+'" rx="8" fill="'+col+'"/>';
+        if(m === 1 || j === 0){
+          g += '<text x="'+(bx+(bw-8)/2)+'" y="'+(pad.t+ih-h-20)+'" text-anchor="middle" class="ch-vl">'+fmt(v)+'</text>';
+        }
+      });
+    });
+    return legend(series) + svg(g) + (unit ? unitNote(unit) : '');
+  }
+
+  /* ---------- 横棒ランキング ---------- */
+  function hbar(items, unit, hl){
+    var labelW = 560, valW = 220, rowH = Math.min(78, (H-40)/items.length);
+    var barW = W - labelW - valW - 40;
+    var vals = items.map(function(it){ return Math.abs(it.value); });
+    var max = niceMax(Math.max.apply(null, vals));
+    var g = '';
+    items.forEach(function(it,i){
+      var yy = 20 + rowH*i, h = Math.min(44, rowH*0.55);
+      var w = barW*Math.abs(it.value)/max;
+      var col = it.value < 0 ? NEG : (i === hl ? '#0b4a9f' : '#2b7ce9');
+      g += '<text x="'+labelW+'" y="'+(yy+h/2+11)+'" text-anchor="end" class="ch-lb2">'+esc(it.name)+'</text>'
+         + '<rect x="'+(labelW+24)+'" y="'+yy+'" width="'+w+'" height="'+h+'" rx="6" fill="'+col+'"/>'
+         + '<text x="'+(labelW+24+w+16)+'" y="'+(yy+h/2+11)+'" class="ch-vl2" fill="'+col+'">'
+         + (it.value>0?'+':'') + fmt(it.value) + '</text>';
+    });
+    return svg(g, 20 + rowH*items.length + 20) + (unit ? unitNote(unit) : '');
+  }
+
+  /* ---------- 100%積み上げ（構成比） ---------- */
+  function stack(items, unit){
+    var total = items.reduce(function(a,it){ return a + it.value; }, 0);
+    var bh = 130, y0 = 60, x = 0, g = '';
+    items.forEach(function(it){
+      var w = W*it.value/total;
+      var pct = it.value/total*100;
+      g += '<rect x="'+x+'" y="'+y0+'" width="'+(w-4)+'" height="'+bh+'" rx="6" fill="'+it.color+'"/>';
+      if(pct > 6){
+        g += '<text x="'+(x+w/2)+'" y="'+(y0+bh/2+14)+'" text-anchor="middle" class="ch-in">'+pct.toFixed(1)+'%</text>';
+      }
+      g += '<text x="'+(x+w/2)+'" y="'+(y0-20)+'" text-anchor="middle" class="ch-lb">'+(pct>6?esc(it.name):'')+'</text>';
+      x += w;
+    });
+    var rows = '<div class="ch-table">' + items.map(function(it){
+      return '<span class="ch-key"><i style="background:'+it.color+'"></i>'+esc(it.name)
+        + '<b>'+fmt(it.value)+'</b></span>';
+    }).join('') + '</div>';
+    return svg(g, 240) + rows + (unit ? unitNote(unit) : '');
+  }
+
+  /* ---------- ドーナツ ---------- */
+  function donut(items, center){
+    var total = items.reduce(function(a,it){ return a + it.value; }, 0);
+    var cx = 300, cy = 260, r = 190, sw = 84, C = 2*Math.PI*r, off = 0, g = '';
+    items.forEach(function(it){
+      var len = C*it.value/total;
+      g += '<circle cx="'+cx+'" cy="'+cy+'" r="'+r+'" fill="none" stroke="'+it.color
+        + '" stroke-width="'+sw+'" stroke-dasharray="'+len+' '+(C-len)+'" stroke-dashoffset="'+(-off)
+        + '" transform="rotate(-90 '+cx+' '+cy+')"/>';
+      off += len;
+    });
+    if(center){
+      g += '<text x="'+cx+'" y="'+(cy+22)+'" text-anchor="middle" class="ch-center">'+esc(center)+'</text>';
+    }
+    items.forEach(function(it,i){
+      var ly = 90 + i*82;
+      g += '<rect x="700" y="'+(ly-30)+'" width="28" height="28" rx="6" fill="'+it.color+'"/>'
+        + '<text x="748" y="'+ly+'" class="ch-lb2" text-anchor="start">'+esc(it.name)+'</text>'
+        + '<text x="1400" y="'+ly+'" class="ch-vl2" text-anchor="end">'+fmt(it.value)
+        + '　'+(it.value/total*100).toFixed(1)+'%</text>';
+    });
+    return svg(g, 520);
+  }
+
+  /* ---------- ウォーターフォール（増減の分解） ---------- */
+  function waterfall(items, unit){
+    var pad = {l:60, r:60, t:56, b:110};
+    var iw = W - pad.l - pad.r, ih = H - pad.t - pad.b;
+    var cum = 0, pts = [];
+    items.forEach(function(it){ pts.push({name:it.name, v:it.value, from:cum, to:cum+it.value}); cum += it.value; });
+    var lo = Math.min(0, Math.min.apply(null, pts.map(function(p){ return Math.min(p.from,p.to); })));
+    var hi = Math.max.apply(null, pts.map(function(p){ return Math.max(p.from,p.to); }));
+    var span = niceMax(hi - lo) || 1;
+    var y = function(v){ return pad.t + ih - ih*(v-lo)/span; };
+    var slot = iw/items.length, bw = Math.min(slot*0.6, 150), g = '';
+    g += '<line x1="'+pad.l+'" y1="'+y(0)+'" x2="'+(W-pad.r)+'" y2="'+y(0)+'" stroke="'+AXIS+'" stroke-width="2"/>';
+    pts.forEach(function(p,i){
+      var cx = pad.l + slot*i + slot/2;
+      var top = Math.max(p.from, p.to), bot = Math.min(p.from, p.to);
+      var col = p.v >= 0 ? POS : NEG;
+      g += '<rect x="'+(cx-bw/2)+'" y="'+y(top)+'" width="'+bw+'" height="'+Math.max(4, y(bot)-y(top))+'" rx="6" fill="'+col+'"/>'
+        + '<text x="'+cx+'" y="'+(y(top)-20)+'" text-anchor="middle" class="ch-vl" fill="'+col+'">'
+        + (p.v>0?'+':'') + fmt(p.v) + '</text>'
+        + '<text x="'+cx+'" y="'+(pad.t+ih+48)+'" text-anchor="middle" class="ch-lb3">'+esc(p.name)+'</text>';
+      if(i < pts.length-1){
+        g += '<line x1="'+(cx+bw/2)+'" y1="'+y(p.to)+'" x2="'+(cx+slot-bw/2)+'" y2="'+y(p.to)
+          + '" stroke="'+AXIS+'" stroke-width="2" stroke-dasharray="8 8"/>';
+      }
+    });
+    return svg(g) + (unit ? unitNote(unit) : '');
+  }
+
+  function svg(inner, h){
+    h = h || H;
+    return '<svg viewBox="0 0 '+W+' '+h+'" class="ch-svg" role="img">'+inner+'</svg>';
+  }
+  function unitNote(u){ return '<p class="ch-unit">単位: '+esc(u)+'</p>'; }
+
+  function build(el){
+    var t = el.getAttribute('data-type');
+    var labels = (el.getAttribute('data-labels')||'').split(',').map(function(s){return s.trim();}).filter(Boolean);
+    var hlAttr = el.getAttribute('data-highlight');
+    var hl = hlAttr === null ? null : parseInt(hlAttr, 10);
+    var unit = el.getAttribute('data-unit') || '';
+    try{
+      if(t === 'line')      return line(labels, parseSeries(el.getAttribute('data-series')), unit);
+      if(t === 'bar')       return bar(labels, parseSeries(el.getAttribute('data-series')), unit, hl);
+      if(t === 'hbar')      return hbar(parseItems(el.getAttribute('data-items')), unit, hl);
+      if(t === 'stack')     return stack(parseItems(el.getAttribute('data-items')), unit);
+      if(t === 'donut')     return donut(parseItems(el.getAttribute('data-items')), el.getAttribute('data-center'));
+      if(t === 'waterfall') return waterfall(parseItems(el.getAttribute('data-items')), unit);
+    }catch(e){
+      return '<p class="ch-err">チャートを描けませんでした（data属性を確認してください）</p>';
+    }
+    return '<p class="ch-err">未対応のチャート種別: '+esc(t)+'</p>';
+  }
+
+  window.renderCharts = function(){
+    Array.prototype.forEach.call(document.querySelectorAll('.chart[data-type]'), function(el){
+      if(el.getAttribute('data-done')) return;
+      el.innerHTML = build(el);
+      el.setAttribute('data-done','1');
+    });
+  };
+  window.__chartBuilders = { line:line, bar:bar, hbar:hbar, stack:stack, donut:donut, waterfall:waterfall,
+                             parseSeries:parseSeries, parseItems:parseItems };
+})();
+</script>
+<script>
+document.addEventListener('DOMContentLoaded', function(){
+  if(window.renderCharts) window.renderCharts();
+});
+if(document.readyState !== 'loading' && window.renderCharts) window.renderCharts();
+</script>
+<script>
+/* ページ内リンク（上部ナビなど）のクリックを要素へのスクロールで処理する。消さない。
+   Claudeのプレビューやチャットの添付表示など、HTMLが data URL や
+   サンドボックス内で開かれる経路では、#id リンクが「別ページへの遷移」として
+   扱われて空白ページに飛ぶ。遷移させずにスクロールすることで、
+   ブラウザで直接開いた場合とプレビューの両方で同じ動作になる。 */
+document.querySelectorAll('a[href^="#"]').forEach(function(a){
+  a.addEventListener('click', function(e){
+    var el = document.getElementById(a.getAttribute('href').slice(1));
+    if (!el) return;
+    e.preventDefault();
+    el.scrollIntoView({behavior:'smooth', block:'start'});
+  });
+});
+</script>
+
+</body>
+</html>
